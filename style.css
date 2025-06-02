@@ -1,0 +1,365 @@
+/* Reset & umum */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e60000;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffdada;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #e60000;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Card Section */
+.card-section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #e60000;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #e60000;
+}
+
+.desc {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 1;
+  max-height: 500px;
+  transition: all 0.4s ease;
+}
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* Footer */
+footer {
+  background: #e60000;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: #e60000;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .nav-links.open {
+    max-height: 200px;
+  }
+  
+  .nav-links li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+.anggota-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.anggota-card {
+  width: 180px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anggota-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.anggota-card h3 {
+  margin: 0.3rem 0 0.2rem;
+  font-size: 1.1rem;
+  color: #e60000;
+}
+
+.anggota-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.anggota-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.anggota-card:hover img {
+  transform: scale(1.05);
+}
+/* Tombol bulat kecil */
+#ai-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #d32f2f;
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.6);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#ai-toggle:hover {
+  background-color: #b71c1c;
+}
+
+/* Chat box style */
+#ai-chat {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 320px;
+  height: 450px;
+  border: 2px solid #d32f2f;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+/* Sembunyikan chat box awalnya */
+.hidden {
+  display: none;
+}
+
+#chat-header {
+  background-color: #d32f2f;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+
+#close-chat {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #fafafa;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.chat-msg {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 80%;
+  white-space: pre-line;
+}
+
+.chat-msg.user {
+  background-color: #d32f2f;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-msg.ai {
+  background-color: #e0e0e0;
+  color: black;
+  align-self: flex-start;
+}
+
+#chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+#user-input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #d32f2f;
+  outline: none;
+}
+
+#chat-input button {
+  background-color: #d32f2f;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  margin-left: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#chat-input button i {
+  pointer-events: none;
+}
+
+.chat-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.chat-options button {
+  background-color: #d32f2f;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.chat-options button:hover {
+  background-color: #b71c1c;
+}
