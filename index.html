@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PMR 287</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">PMR 287</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#kegiatan">Kegiatan</a></li>
+      <li><a href="#anggota">Anggota</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <h1>PMR 287</h1>
+    <p>Palang Merah Remaja Unit 287 - Peduli, Sigap, dan Siap</p>
+  </header>
+
+  <section id="kegiatan" class="card-section">
+    <h2>Kegiatan PMR</h2>
+    <div class="card-container">
+      <div class="card" onclick="toggleDesc(this)">
+        <img src="https://source.unsplash.com/400x250/?first-aid" alt="Pelatihan" />
+        <div class="card-content">
+          <h3>Pelatihan Pertolongan Pertama</h3>
+          <div class="desc hidden">Latihan rutin setiap minggu membahas teknik dasar P3K dan penanganan korban darurat.</div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleDesc(this)">
+        <img src="https://source.unsplash.com/400x250/?blood-donation" alt="Donor Darah" />
+        <div class="card-content">
+          <h3>Donor Darah</h3>
+          <div class="desc hidden">Kegiatan donor darah bekerja sama dengan PMI dan warga sekitar.</div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleDesc(this)">
+        <img src="https://source.unsplash.com/400x250/?social" alt="Bakti Sosial" />
+        <div class="card-content">
+          <h3>Bakti Sosial</h3>
+          <div class="desc hidden">Mengunjungi panti asuhan, bersih-bersih lingkungan, dan pembagian bantuan.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="anggota" class="card-section">
+  <h2>Struktur Organisasi PMR 287</h2>
+  <div class="anggota-container">
+    <div class="anggota-card">
+      <img src="ketua.jpg" alt="Ketua" />
+      <h3>Olivia Valen</h3>
+      <p>Ketua</p>
+    </div>
+    <div class="anggota-card">
+      <img src="wakil.jpg" alt="Wakil Ketua" />
+      <h3>Desvita Oktavia</h3>
+      <p>Wakil Ketua</p>
+    </div>
+    <div class="anggota-card">
+      <img src="sek.jpg" alt="Sekretaris" />
+      <h3>Aulia</h3>
+      <p>Sekretaris 1</p>
+    </div>
+    <div class="anggota-card">
+      <img src="sek2.jpg" />
+      <h3>Adara</h3>
+      <p>Sekretaris 2</p>
+    </div>
+    <div class="anggota-card">
+      <img src="korlom.jpg" alt="Bendahara" />
+      <h3>Citra</h3>
+      <p>Koordinator Lomba</p>
+    </div>
+    <div class="anggota-card">
+      <img src="korlom2.jpg"/>
+      <h3>Vania</h3>
+      <p>Koordinator Lomba</p>
+    </div>
+    <div class="anggota-card">
+      <img src="kot1.jpg" alt="Humas" />
+      <h3>juliarta</h3>
+      <p>Koordinator Lapangan</p>
+    </div>
+    <div class="anggota-card">
+      <img src="kot2.jpg" />
+      <h3>Chika</h3>
+      <p>Koordinator Lapangan</p>
+    </div>
+    <div class="anggota-card">
+      <img src="humas.jpg" alt="Koordinator Lapangan" />
+      <h3>Gilang</h3>
+      <p>Humas</p>
+    </div>
+    <div class="anggota-card">
+      <img src="humas2.jpg" />
+      <h3>Arfy</h3>
+      <p>Humas</p>
+    </div>
+  </div>
+</section>
+
+
+<!--  AI CHAT -->
+<div id="ai-toggle" title="Buka Asisten PMR 287">
+  <i class="fa fa-robot"></i>
+</div>
+
+<div id="ai-chat" class="hidden">
+  <div id="chat-header">
+    Asisten PMR 287 🤖
+    <span id="close-chat" title="Tutup Chat">&times;</span>
+  </div>
+  <div id="chat-messages"></div>
+  <div id="chat-input">
+    <input type="text" id="user-input" placeholder="Ketik pertanyaan..." />
+    <button onclick="sendMessage()"><i class="fa fa-paper-plane"></i></button>
+  </div>
+</div>
+
+  <footer>
+    <p>&copy; 2025 PMR 287. Dibuat dengan ❤️ untuk kemanusiaan.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
